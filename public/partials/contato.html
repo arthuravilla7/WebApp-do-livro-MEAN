@@ -1,8 +1,16 @@
 <h1 class="text-center">Contato</h1>
-<p ng-show="mensagem.texto">
-	{{mensagem.texto}}
-</p>
-<form>
+<div ng-show="mensagem.texto" class="alert alert-danger">
+	<p>
+		{{mensagem.texto}}
+	</p>
+</div>
+<div ng-show="mensagemOk.texto" class="alert alert-success">
+	<p>
+		{{mensagemOk.texto}}
+	</p>
+</div>
+
+<form ng-submit="salva()">
 	<div class="form-group">
 		<label for="nome">Nome completo</label>
 		<input type="text" class="form-control" id="nome" name="nome" ng-model="contato.nome" required>	
