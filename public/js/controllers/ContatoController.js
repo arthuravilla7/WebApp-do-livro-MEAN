@@ -26,5 +26,8 @@ angular.module('contatooh').controller('ContatoController', function($scope, $ro
 		});
 	};
 		 
-    //console.log($routeParams.contatoId);
+	Contato.query(function(contatos){
+		$scope.contatos = contatos;
+	});
+		 
 });
