@@ -7,6 +7,12 @@
 		<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 	</head>
 	<body class="container">
+		<div class="text-right">
+			<p>
+				Logado como: <span id="usuario-logado"><%=usuarioLogado %></span>
+				<a href="/logout">Logout</a>							
+			</p>					
+		</div>
 		<ng-view></ng-view>
 
 		<!-- frameworks -->
